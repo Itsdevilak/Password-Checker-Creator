@@ -2,7 +2,7 @@ import random
 import re
 import tkinter as tk
 from tkinter import messagebox
-from PIL import Image, ImageTk  # Requires Pillow library
+from PIL import Image, ImageTk  
 
 def check_password_strength(password):
     length_criteria = len(password) >= 8
@@ -67,12 +67,12 @@ root.title("Password Strength Checker and Generator")
 root.geometry("600x400")  # Set the window size
 
 # Load and set the background image
-bg_image = Image.open(r"V:\College topic\Python course\project-1(pass)\2.jpg")  # Use raw string
-bg_image = bg_image.resize((600, 800), Image.LANCZOS)  # Resize to fit the window
+bg_image = Image.open(r"V:\College topic\Python course\project-1(pass)\2.jpg")  
+bg_image = bg_image.resize((600, 800), Image.LANCZOS)  # Resize 
 bg_photo = ImageTk.PhotoImage(bg_image)
 
 bg_label = tk.Label(root, image=bg_photo)
-bg_label.place(relwidth=1, relheight=1)  # Make background label fill the window
+bg_label.place(relwidth=1, relheight=1)  # Make background label
 
 # Generate Password Section
 length_label = tk.Label(root, text="Enter desired length for strong password (min 8):", bg='lightgray', font=("Arial", 12))
